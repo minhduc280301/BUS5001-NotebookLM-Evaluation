@@ -1,0 +1,270 @@
+# BUS5001-NotebookLM-Evaluation  
+This repository contains the test results and evidence for BUS5001 Assessment 3 Question 4.  
+The scenario involved testing NotebookLM functions using BUS5001-Wk05.pdf lecture slides.
+
+## Summary Output
+This source offers an in-depth look at governance, security, and DevOps within the context of cloud platforms and analytics, originating from La Trobe University's Centre for Data Analytics and Cognition. It commences by defining data governance and illustrating the consequences of its failure through prominent data breach examples. The material then transitions to cloud security, explaining key terms like confidentiality, integrity, authenticity, and availability, and detailing various threats and vulnerabilities, alongside risk management strategies. Finally, the document explores DevOps, outlining its philosophy, benefits, and best practices such as continuous integration, version control, and microservices, highlighting its significance in modern software development and cloud operations.
+
+## Q&A Output
+Based on the sources, the major cloud security threats mentioned include:
+•
+Traffic Eavesdropping: This occurs when an unauthorised person intercepts or views messages as they travel between a cloud consumer and a cloud service.
+•
+Malicious Intermediary: This threat involves an unauthorised party altering messages with harmful data as they are transmitted to a compromised virtual server in the cloud.
+•
+Denial of Service (DoS): An attacker, acting as a cloud service consumer, can send an overwhelming number of messages to a cloud service, causing an overload and making the service unavailable to legitimate consumers.
+•
+Insufficient Authorisation: This threat relates to a lack of proper access controls, allowing an attacker to gain unauthorised access or perform actions they shouldn't be able to. This can be countered by Identity and Access Management (IAM).
+•
+Virtualisation Attack: This type of attack involves a trusted cloud service consumer (attacker) compromising a virtual server within the cloud environment.
+•
+Overlapping Trust Boundaries: This threat arises when different cloud service consumers or components share trust boundaries, potentially allowing an attacker from one boundary to impact others. IAM can help counter this.
+•
+Container Attacks: Containerisation can introduce a lack of isolation from the host operating system, which means if a container is compromised, it could potentially affect other containers or the underlying host. IAM also helps counter this threat.
+Additionally, the sources mention "Other considerations" that relate to cloud security, such as:
+•
+Poorly implemented cloud service deployment.
+•
+Incompatibilities in security policies.
+
+## Outline Output
+Here is an outline of the lecture material, suitable for exam revision:
+
+--------------------------------------------------------------------------------
+Week 05 – Governance, Security, DevOps
+This lecture covers essential concepts in data governance, cloud security, and DevOps, highlighting their interconnections and importance in modern cloud platforms and analytics.
+
+--------------------------------------------------------------------------------
+1. Data Governance
+•
+Definition: A principled approach to managing data throughout its life cycle, from acquisition to use to disposal.
+•
+Purpose: Ensures data is secure, private, accurate, available, and usable. It encompasses the actions people must take, the processes they must follow, and the technology that supports them.
+•
+Components: Ownership, Accessibility, Security, Quality, Knowledge (People, Process, Technology).
+•
+Consequences of Failure: Poor data governance can lead to significant data breaches and financial losses. Examples include:
+◦
+Yahoo data breach (2013): 3 billion records, estimated $350 million loss.
+◦
+First American Financial Corporation (2019): 885 million records, due to poor security.
+◦
+Equifax (2017): 148 million records, $700 million in payouts.
+◦
+Marriott International (2018): 500 million records, $24 million in lawsuits.
+◦
+Facebook (2019): 540 million records.
+•
+Data Lineage: The process of tracking data through its lifecycle, including metadata, processes, and systems, culminating in reports.
+
+--------------------------------------------------------------------------------
+2. Cloud Security – Core Concepts
+•
+Key Security Measures (CIA Triad and Availability):
+◦
+Confidentiality: Ensuring messages are not seen by unauthorised individuals.
+◦
+Integrity: Ensuring messages are not altered by unauthorised individuals.
+◦
+Authenticity: Ensuring data is provided by an authorised source. Includes Nonrepudiation, which is the inability of a party to deny the authenticity of an interaction.
+◦
+Availability: Being accessible and usable during a specified time period. Responsibility is generally shared between the Cloud Provider and Carrier, and can extend to the Cloud Consumer if offering services to third parties.
+•
+Threat: A potential security violation that can breach privacy or cause harm, often by exploiting a known weakness.
+•
+Vulnerability: A weakness that can be exploited due to insufficient or compromised security controls, configuration deficiencies, security policy weaknesses, user errors, hardware/firmware flaws, software bugs, or poor security architecture.
+•
+Risk: The possibility of loss or harm from an activity.
+◦
+Measurement: Determined by its threat level and the number of possible or known vulnerabilities.
+◦
+Considerations: The probability of a threat exploiting vulnerabilities and the expectation of loss if the resource is compromised.
+•
+Security Controls / Mechanisms / Policies:
+◦
+Security Controls: Countermeasures used to prevent or respond to security threats and reduce or avoid risk.
+◦
+Security Mechanisms: Components that form a defensive framework, typically describing countermeasures.
+◦
+Security Policies: Sets of security rules and regulations that define how security is implemented and enforced, directing controls and mechanisms.
+•
+Threat Agents: Individuals or entities that want to abuse or cause loss to assets (IT resources and data). Examples include Anonymous Attacker, Malicious Service Agent, Trusted Attacker, and Malicious Insider.
+
+--------------------------------------------------------------------------------
+3. Major Cloud Security Threats
+•
+Traffic Eavesdropping: An unauthorised party intercepts or views messages between a cloud consumer and a cloud service.
+•
+Malicious Intermediary: An unauthorised party alters messages with harmful data as they are transmitted to a compromised virtual server in the cloud.
+•
+Denial of Service (DoS): An attacker, posing as a cloud service consumer, overwhelms a cloud service with messages, rendering it unavailable to legitimate consumers.
+•
+Insufficient Authorisation: Lack of proper access controls allowing unauthorised access or actions. Identity and Access Management (IAM) can counter this.
+•
+Virtualisation Attack: A trusted cloud service consumer (attacker) compromises a virtual server within the cloud environment. IAM can help counter this.
+•
+Overlapping Trust Boundaries: Different cloud service consumers or components share trust boundaries, allowing an attacker from one boundary to impact others. IAM can help counter this.
+•
+Container Attacks: Containerisation can introduce a lack of isolation from the host operating system, potentially leading to a compromised container affecting other containers or the host. IAM helps counter this threat.
+•
+Other Considerations for Cloud Security:
+◦
+Poorly implemented cloud service deployment.
+◦
+Incompatibilities in security policies.
+◦
+Cloud contracts: Issues of liability, indemnity, and shared responsibilities in models like IaaS.
+
+--------------------------------------------------------------------------------
+4. Risk Management
+•
+Definition: A systematic approach to understanding and addressing risks.
+•
+Risk Measurement: Involves assessing the probability of occurrence and the impact of occurrence.
+◦
+A Risk Assessment Matrix is used to determine the overall risk level (e.g., Low, Medium, Serious, High) by mapping severity against probability.
+•
+Components of the Risk Management Cycle:
+1.
+Risk Assessment:
+▪
+Threats: Identifying potential sources of harm.
+▪
+Risk Identification: Recognising specific risks to assets.
+▪
+Risk Evaluation: Determining the likelihood and impact of identified risks.
+2.
+Risk Mitigation Policy (Risk Treatment):
+▪
+Risk Mitigation Actions: Implementing specific measures to reduce risks. This is guided by security policies and involves deploying security controls/mechanisms.
+3.
+Risk Control:
+▪
+Risk Review: Periodically examining the effectiveness of the risk management process.
+▪
+Risk Monitoring: Continuously observing and tracking risks and mitigation strategies to adjust for evolving threats.
+
+--------------------------------------------------------------------------------
+5. Cloud Security Mechanisms
+These are countermeasures deployed to improve security:
+•
+Encryption: Ensures message confidentiality (e.g., HTTPS).
+•
+Hashing: Detects message alteration by rejecting messages where the received digest does not match the locally computed digest.
+•
+Digital Signatures: Verifies the integrity and authenticity of messages.
+•
+Public Key Infrastructure (PKI): A framework for creating and managing digital certificates, used for secure communication and authentication.
+•
+Identity and Access Management (IAM):
+◦
+Manages Authentication, Authorisation, User Management (identities, access groups, password policies, role/privilege management), and Credential Management.
+◦
+Counters threats like insufficient authorisation, denial of service, overlapping trust boundaries, virtualisation, and containerisation attacks.
+•
+Single Sign On (SSO): Allows users to access multiple services with a single set of credentials.
+•
+Cloud Based Security Groups: Defines network access rules for cloud resources.
+•
+Hardening: Reducing a system's attack surface by closing unused ports, disabling unnecessary services, uninstalling redundant software, etc..
+
+--------------------------------------------------------------------------------
+6. DevOps
+•
+Definition: A philosophy that unites people, processes, and products to enable continuous delivery of value to end-users.
+•
+Core Concepts: Often perceived as development and operations collaboration, treating infrastructure as code, using automation, and enabling small, frequent deployments.
+•
+Benefits:
+◦
+Speed Delivery: Shortens cycle time and increases deployment frequency.
+◦
+Reliability: Achieved through smaller batches, more automation, hardening the release pipeline, and improving telemetry.
+◦
+Scale: Facilitates scaling operations.
+◦
+Collaboration: Enhances communication and teamwork between development and operations teams.
+◦
+Security: Integrates security into the development and operations process.
+•
+Key Aims: Decrease the cycle time and increase the frequency of deployments.
+•
+DevOps Lifecycle (Infinity Loop): Represents a continuous flow of activities including Plan, Code, Build, Test, Release, Deploy, Operate, and Monitor, with continuous feedback and collaboration throughout.
+•
+Best Practices:
+◦
+Continuous Integration (CI).
+◦
+Continuous Delivery (CD).
+◦
+Version Control.
+◦
+Agile Planning.
+◦
+Monitoring and Logging.
+◦
+Infrastructure as Code.
+◦
+Microservices architecture.
+◦
+Communication and Collaboration.
+
+--------------------------------------------------------------------------------
+7. Version Control Systems (VCS) / Source Code Management (SCM)
+•
+Purpose: Manages changes to documents, computer programs, large websites, and other collections of information.
+•
+Benefits:
+◦
+History: Provides an audit trail of every change by every individual, with the ability to rollback to previous versions.
+◦
+Collaboration: Enables branching (creating separate lines of development) and merging (combining changes from different branches).
+◦
+Traceability: Allows for grouped changes and commit logs, and tagging to project management.
+•
+Git:
+◦
+A Distributed Version Control System (DVCS).
+◦
+Developed by Linus Torvalds.
+◦
+Extremely popular in software development, with nearly 94% of developers favouring it in 2022.
+•
+Git vs. GitHub:
+◦
+Git: A high-quality version control system installed and maintained on your local system (not cloud-based). Its branching model is a key distinguishing feature.
+◦
+GitHub: A cloud-based Git repository hosting service. It allows sharing code, enabling others to make revisions or edits.
+•
+Git Flow: A branching model for Git that defines strict rules for feature development, releases, hotfixes, and master/develop branches .
+•
+GitHub Actions: A feature of GitHub that enables automation of workflows based on events, using runners to execute jobs and steps (e.g., building, testing, deploying code) .
+
+## Security Policies / Controls Extraction
+The sources you provided mention several security policies and controls.
+Here are the security policies and controls discussed in the lecture slides:
+•
+Security Controls: These are defined as countermeasures used to prevent or respond to security threats and to reduce or avoid risk.
+•
+Security Mechanisms: These are components that comprise a defensive framework and are typically used to describe countermeasures.
+•
+Security Policies: These are sets of security rules and regulations that define how security is implemented and enforced, and they direct controls and mechanisms.
+Specific security mechanisms and controls highlighted include:
+•
+Encryption: This mechanism ensures message confidentiality. For example, HTTPS is mentioned as a method to ensure message confidentiality through encryption.
+•
+Hashing: This mechanism helps detect message alteration by rejecting messages where the received digest doesn't match the locally computed digest.
+•
+Digital Signatures: These verify the integrity and authenticity of messages.
+•
+Public Key Infrastructure (PKI): This is a framework used for secure communication and authentication.
+•
+Identity and Access Management (IAM): This mechanism manages authentication, authorisation, user management (including user identities, access groups, password policies, and role/privilege management), and credential management. IAM is crucial for countering threats such as insufficient authorisation, denial of service, overlapping trust boundaries, virtualisation attacks, and containerisation attacks.
+•
+Single Sign On (SSO): This allows users to access multiple services with a single set of credentials.
+•
+Cloud Based Security Groups: These define network access rules for cloud resources.
+•
+Hardening: This involves reducing a system's attack surface by measures such as closing unused/unnecessary server ports, disabling unnecessary services, uninstalling redundant software, disabling guest access to system directories, and establishing memory quotas.
+•
+Principle of Least Privilege: While not explicitly listed as a "mechanism" or "control" in the same section as others, a slide is dedicated to it, illustrating how privilege management and least privilege practices provide "more control" and "best control" over access, in contrast to high-risk or common practices with basic controls. It relates directly to how authorisation is managed within security.
